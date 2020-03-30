@@ -21,6 +21,14 @@ $messages = array_mess($messages);
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Guests Book</title>
+
+  <style>
+    .message {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
   <form action="index.php" method="POST">
@@ -40,9 +48,9 @@ $messages = array_mess($messages);
   <?php if(!empty($messages)): ?>
     <?php foreach($messages as $message): ?>
       <?php $message = get_format_message($message); ?>
-      <div class="messages">
-        <p>Автор: | Дата: </p>
-        <div></div>
+      <div class="message">
+        <p>Автор: <?=$message[0]?> | Дата: <?=$message[2]?> </p>
+        <div><?=nl2br($message[1])?></div>
       </div>
     <?php endforeach; ?>
   <?php endif; ?>
