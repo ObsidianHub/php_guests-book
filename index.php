@@ -34,5 +34,17 @@ $messages = array_mess($messages);
     </p>
     <button type="submit">Написать</button>
   </form>
+
+  <hr>
+
+  <?php if(!empty($messages)): ?>
+    <?php foreach($messages as $message): ?>
+      <?php $message = get_format_message($message); ?>
+      <div class="messages">
+        <p>Автор: | Дата: </p>
+        <div></div>
+      </div>
+    <?php endforeach; ?>
+  <?php endif; ?>
 </body>
 </html>
