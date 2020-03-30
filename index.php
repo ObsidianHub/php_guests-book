@@ -6,6 +6,8 @@ require_once 'funcs.php';
 
 if(!empty($_POST)){
   save_mess();
+  header("Location: {$_SERVER['PHP_SELF']}");
+  exit;
 }
 
 ?>
@@ -24,7 +26,7 @@ if(!empty($_POST)){
     </p>
     <p>
       <label for="text">Текст: </label><br>
-      <textarea name="name" id="text"></textarea>
+      <textarea name="text" id="text"></textarea>
     </p>
     <button type="submit">Написать</button>
   </form>
