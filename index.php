@@ -2,6 +2,11 @@
 
 header('Content-type: text/html; charset=utf-8');
 error_reporting(-1);
+require_once 'funcs.php';
+
+if(!empty($_POST)){
+  save_mess();
+}
 
 ?>
 <!DOCTYPE html>
