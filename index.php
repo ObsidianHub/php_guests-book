@@ -50,7 +50,7 @@ $messages = array_mess($messages);
       <?php $message = get_format_message($message); ?>
       <div class="message">
         <p>Автор: <?=$message[0]?> | Дата: <?=$message[2]?> </p>
-        <div><?=nl2br($message[1])?></div>
+        <div><?=nl2br(htmlspecialchars($message[1]))?></div>
       </div>
     <?php endforeach; ?>
   <?php endif; ?>
