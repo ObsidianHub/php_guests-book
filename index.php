@@ -10,6 +10,9 @@ if(!empty($_POST)){
   exit;
 }
 
+$messages = get_mess();
+$messages = array_mess($messages);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
