@@ -12,6 +12,7 @@ if(!empty($_POST)){
 
 $messages = get_mess();
 $messages = array_mess($messages);
+// print_arr($messages);
 
 ?>
 <!DOCTYPE html>

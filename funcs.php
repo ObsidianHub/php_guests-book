@@ -11,5 +11,10 @@ function get_mess(){
 
 function array_mess($messages){
   $messages = explode("\n***\n", $messages);
-  return $messages;
+  array_pop($messages);
+  return array_reverse($messages);
+}
+
+function print_arr($arr){
+  echo '<pre>' . print_r($arr, true) . '</pre>';
 }
